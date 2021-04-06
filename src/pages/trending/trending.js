@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+import SingleContent from "../../components/SingleContent/SingleContent";
+import "./trending.css";
+
 const Trending = () => {
   const [content, setContent] = useState([]);
   useEffect(() => {
@@ -21,10 +24,17 @@ const Trending = () => {
       <span className="pageTitle">Trending</span>
       <div className="trending">
         {content &&
-          content.map((val) => {
-            // return(<p>{val}</p>)
-            console.log(val);
-          })}
+          content.map((val, index) => (
+            <SingleContent
+              key={val.id}
+              id={val.id}
+              title={val.title || val.name}
+              poster={val.poster_path}
+              date={val.release_date || val.first_air_date}
+              media_type={val.media_type}
+              vote_average={val.vote_average}
+            />
+          ))}
       </div>
     </div>
   );
