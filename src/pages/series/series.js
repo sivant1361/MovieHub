@@ -27,6 +27,7 @@ const Series = () => {
   useEffect(() => {
     fetchSeries();
     // console.log(content);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page, genreForURL]);
 
   return (

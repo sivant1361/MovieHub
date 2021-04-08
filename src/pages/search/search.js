@@ -43,6 +43,7 @@ const Search = () => {
   useEffect(() => {
     fetchSearch();
     window.scroll(0, 0);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [type, page]);
 
   return (

@@ -20,6 +20,8 @@ const Trending = () => {
   useEffect(() => {
     fetchTrending();
     // console.log(content);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
 
   return (

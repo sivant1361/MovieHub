@@ -47,6 +47,8 @@ export default function ContentModal({ children, media_type, id }) {
       `https://api.themoviedb.org/3/${media_type}/${id}?api_key=${process.env.REACT_APP_API_KEY}`
     );
     setContent(data);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   };
 
   const fetchVideos = async () => {
@@ -59,6 +61,8 @@ export default function ContentModal({ children, media_type, id }) {
   useEffect(() => {
     fetchData();
     fetchVideos();
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

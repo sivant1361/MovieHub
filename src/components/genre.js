@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import axios from "axios";
 import { Chip } from "@material-ui/core";
 const Genre = ({
@@ -34,6 +34,8 @@ const Genre = ({
     return () => {
       setGenres({});
     };
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <div style={{ padding: "6px 0" }}>

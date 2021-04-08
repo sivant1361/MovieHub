@@ -27,6 +27,7 @@ const Movies = () => {
   useEffect(() => {
     fetchMovies();
     // console.log(content);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page, genreForURL]);
 
   return (
