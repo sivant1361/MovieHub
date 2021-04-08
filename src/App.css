@@ -10,7 +10,8 @@
 
 .app {
   min-height: 100vh;
-  background-color: #39445a;
+  background-color: black;
+  /* background-color: #39445a; */
   color: white;
   padding-top: 130px;
   padding-bottom: 70px;
@@ -25,6 +26,9 @@
   padding: 4px;
   border-radius: 50px;
   color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media (max-width: 1000px) {
